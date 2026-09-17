@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Big Banana Cafe | Home</title>
+
+  <style>
+/* ============================================
+   BIG BANANA CAFE - STYLESHEET
+   ============================================ */
+
+/* ---- Reset basics ---- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: #3b2a20;
+  background-color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ---- Cafe Colors ---- */
+
+:root {
+  --brown: #4b2e20;
+  --coffee: #7b4b2a;
+  --yellow: #f4c542;
+  --cream: #fff8e7;
+  --light-cream: #f7f2e9;
+  --gray-text: #6b625c;
+}
+
+/* ---- Header / Navigation ---- */
+
+header {
+  background-color: var(--brown);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.logo-text {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.logo-text span {
+  color: var(--yellow);
+}
+
+.nav-links {
+  display: flex;
+  gap: 8px;
+}
+
+.nav-links li a {
+  color: #fff8e7;
+  padding: 10px 14px;
+  border-radius: 5px;
+  font-size: 15px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background-color: var(--yellow);
+  color: var(--brown);
+  font-weight: 600;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+/* ---- Hero Section ---- */
+
+.hero {
+  background: linear-gradient(135deg, var(--brown) 0%, var(--coffee) 100%);
+  color: #ffffff;
+  padding: 70px 20px;
+}
+
+.hero-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+}
+
+.hero-text h1 {
+  font-size: 42px;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.hero-text h1 span {
+  color: var(--yellow);
+}
+
+.hero-text p {
+  font-size: 17px;
+  color: #f7ead7;
+  margin-bottom: 26px;
+  max-width: 540px;
+}
+
+.hero-image {
+  flex: 1 1 350px;
+  text-align: center;
+}
+
+.cafe-picture {
+  background-color: var(--cream);
+  border-radius: 20px;
+  width: 330px;
+  height: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--brown);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+.cafe-picture .banana {
+  font-size: 90px;
+}
+
+.cafe-picture .coffee {
+  font-size: 65px;
+}
+
+/* ---- Buttons ---- */
+
+.btn {
+  display: inline-block;
+  padding: 13px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary {
+  background-color: var(--yellow);
+  color: var(--brown);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  margin-left: 12px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+/* ---- General Section ---- */
+
+section {
+  padding: 60px 20px;
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 30px;
+  color: var(--brown);
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: var(--gray-text);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.alt-bg {
+  background-color: var(--light-cream);
+}
+
+/* ---- Features ---- */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.feature-card {
+  background-color: #ffffff;
+  border: 1px solid #eadfd2;
+  border-radius: 10px;
+  padding: 26px 22px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(75, 46, 32, 0.1);
+}
+
+.feature-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+.feature-card h3 {
+  color: var(--brown);
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.feature-card p {
+  color: var(--gray-text);
+  font-size: 14.5px;
+}
+
+/* ---- Stats ---- */
+
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.stats-bar .stat h3 {
+  font-size: 34px;
+  color: var(--yellow);
+}
+
+.stats-bar .stat p {
+  color: #f7ead7;
+}
+
+/* ---- Menu Cards ---- */
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 26px;
+}
+
+.menu-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #eadfd2;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(75,46,32,0.12);
+}
+
+.menu-image {
+  background-color: var(--cream);
+  padding: 25px;
+  text-align: center;
+  font-size: 75px;
+}
+
+.menu-body {
+  padding: 20px;
+}
+
+.menu-body h3 {
+  color: var(--brown);
+  margin-bottom: 8px;
+}
+
+.menu-body p {
+  color: var(--gray-text);
+  font-size: 14.5px;
+  margin-bottom: 12px;
+}
+
+.price {
+  color: var(--coffee);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* ---- Coffee Bean Cards ---- */
+
+.bean-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 26px;
+}
+
+.bean-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #eadfd2;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bean-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(75,46,32,0.12);
+}
+
+.bean-image {
+  background-color: var(--cream);
+  padding: 25px;
+  text-align: center;
+  font-size: 70px;
+}
+
+.bean-body {
+  padding: 20px;
+}
+
+.bean-body h3 {
+  color: var(--brown);
+  margin-bottom: 8px;
+}
+
+.bean-body p {
+  color: var(--gray-text);
+  font-size: 14.5px;
+  margin-bottom: 12px;
+}
+
+/* ---- Cart ---- */
+
+.cart-section {
+  background-color: var(--cream);
+}
+
+.cart-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.cart-box {
+  background-color: #ffffff;
+  border: 1px solid #eadfd2;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+.cart-box h3 {
+  color: var(--brown);
+  margin-bottom: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee2d5;
+  padding: 12px 0;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 2px solid #eadfd2;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ---- Checkout Form ---- */
+
+.order-form label {
+  display: block;
+  font-weight: 600;
+  color: var(--brown);
+  margin-bottom: 6px;
+  margin-top: 15px;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid #d7cabc;
+  border-radius: 6px;
+  font-size: 14.5px;
+  font-family: inherit;
+}
+
+.order-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.payment-note {
+  background-color: #fff6d6;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 6px;
+  color: #6b5420;
+  font-size: 13px;
+}
+
+.form-msg {
+  margin-top: 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.form-msg.success {
+  color: #218838;
+}
+
+.form-msg.error {
+  color: #c62828;
+}
+
+/* ---- About ---- */
+
+.about-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-picture {
+  background-color: var(--cream);
+  border-radius: 15px;
+  min-height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+}
+
+.about-text h2 {
+  color: var(--brown);
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  color: var(--gray-text);
+  margin-bottom: 15px;
+}
+
+/* ---- Contact ---- */
+
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact-info-card {
+  background-color: var(--brown);
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.contact-info-card h3 {
+  margin-bottom: 20px;
+  color: var(--yellow);
+}
+
+.contact-info-item {
+  margin-bottom: 20px;
+}
+
+.contact-info-item strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.contact-info-item p {
+  color: #f7ead7;
+  font-size: 14.5px;
+}
+
+/* ---- Footer ---- */
+
+footer {
+  background-color: var(--brown);
+  color: #f0dfcc;
+  padding: 40px 20px 20px 20px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 24px;
+}
+
+.footer-inner h4 {
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.footer-inner ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-inner ul li a:hover {
+  color: var(--yellow);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.15);
+  padding-top: 18px;
+  text-align: center;
+  font-size: 13px;
+  color: #c8b7a4;
+}
+
+/* ---- Responsive Navigation ---- */
+
+@media (max-width: 800px) {
+
+  .cart-wrap,
+  .about-wrap,
+  .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: var(--brown);
+    flex-direction: column;
+    padding: 10px 20px 20px 20px;
+    display: none;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .hero-text h1 {
+    font-size: 30px;
+  }
+
+  .btn-outline {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header>
+
+    <nav class="navbar">
+
+      <!-- Logo -->
+
+      <a href="#home" class="logo">
+
+        <div class="logo-icon">🍌</div>
+
+        <span class="logo-text">
+          BIG BANANA <span>CAFE</span>
+        </span>
+
+      </a>
+
+
+      <!-- Navigation -->
+
+      <ul class="nav-links" id="navLinks">
+
+        <li>
+          <a href="#home" class="active">Home</a>
+        </li>
+
+        <li>
+          <a href="#about">About</a>
+        </li>
+
+        <li>
+          <a href="#menu">Menu</a>
+        </li>
+
+        <li>
+          <a href="#beans">Coffee Beans</a>
+        </li>
+
+        <li>
+          <a href="#order">Order</a>
+        </li>
+
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+
+      </ul>
+
+
+      <!-- Mobile Menu Button -->
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle menu"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+    </nav>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-inner">
+
+      <div class="hero-text">
+
+        <h1>
+          Welcome to
+          <span>Big Banana Cafe</span>
+        </h1>
+
+        <p>
+          Fresh coffee, delicious food, premium coffee beans
+          and a relaxing place to enjoy your day.
+        </p>
+
+        <a href="#menu" class="btn btn-primary">
+          View Our Menu
+        </a>
+
+        <a href="#beans" class="btn btn-outline">
+          Shop Coffee Beans
+        </a>
+
+      </div>
+
+
+      <div class="hero-image">
+
+        <div class="cafe-picture">
+
+          <div class="banana">🍌</div>
+
+          <div class="coffee">☕</div>
+
+          <h2>Big Banana Cafe</h2>
+
+          <p>Fresh • Friendly • Delicious</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= WHY CHOOSE US ================= -->
+
+  <section>
+
+    <div class="section-inner">
+
+      <div class="section-title">
+
+        <h2>Why Choose Big Banana Cafe?</h2>
+
+        <p>
+          Great coffee, quality ingredients and a friendly
+          atmosphere for everyone.
+        </p>
+
+      </div>
+
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+
+          <div class="feature-icon">☕</div>
+
+          <h3>Fresh Coffee</h3>
+
+          <p>
+            Freshly brewed coffee made with carefully selected beans.
+          </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <div class="feature-icon">🍌</div>
+
+          <h3>Banana Specials</h3>
+
+          <p>
+            Try our delicious banana drinks, desserts and signature treats.
+          </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <div class="feature-icon">🥐</div>
+
+          <h3>Fresh Food</h3>
+
+          <p>
+            Delicious pastries, snacks and cafe favorites.
+          </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+          <div class="feature-icon">❤️</div>
+
+          <h3>Good Atmosphere</h3>
+
+          <p>
+            A comfortable place to relax, work and meet friends.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= STATS ================= -->
+
+  <section class="hero">
+
+    <div class="section-inner stats-bar">
+
+      <div class="stat">
+
+        <h3>100%</h3>
+
+        <p>
+          Fresh Coffee
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <h3>3+</h3>
+
+        <p>
+          Coffee Bean Choices
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <h3>7</h3>
+
+        <p>
+          Days Open
+        </p>
+
+      </div>
+
+
+      <div class="stat">
+
+        <h3>1</h3>
+
+        <p>
+          Happy Cafe
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= MENU ================= -->
+
+  <section class="alt-bg" id="menu">
+
+    <div class="section-inner">
+
+      <div class="section-title">
+
+        <h2>Our Cafe Menu</h2>
+
+        <p>
+          Enjoy some of our favorite drinks and treats.
+        </p>
+
+      </div>
+
+
+      <div class="menu-grid">
+
+
+        <!-- Americano -->
+
+        <div class="menu-card">
+
+          <div class="menu-image">
+            ☕
+          </div>
+
+          <div class="menu-body">
+
+            <h3>Americano</h3>
+
+            <p>
+              Rich espresso with hot water.
+            </p>
+
+            <div class="price">
+              ฿90
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Latte -->
+
+        <div class="menu-card">
+
+          <div class="menu-image">
+            🥛
+          </div>
+
+          <div class="menu-body">
+
+            <h3>Latte</h3>
+
+            <p>
+              Smooth espresso with steamed milk.
+            </p>
+
+            <div class="price">
+              ฿110
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Banana Coffee -->
+
+        <div class="menu-card">
+
+          <div class="menu-image">
+            🍌☕
+          </div>
+
+          <div class="menu-body">
+
+            <h3>Banana Coffee</h3>
+
+            <p>
+              Our signature coffee and banana combination.
+            </p>
+
+            <div class="price">
+              ฿130
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Banana Cake -->
+
+        <div class="menu-card">
+
+          <div class="menu-image">
+            🍰
+          </div>
+
+          <div class="menu-body">
+
+            <h3>Banana Cake</h3>
+
+            <p>
+              Soft and delicious homemade banana cake.
+            </p>
+
+            <div class="price">
+              ฿95
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= COFFEE BEANS ================= -->
+
+  <section id="beans">
+
+    <div class="section-inner">
+
+      <div class="section-title">
+
+        <h2>Shop Our Coffee Beans</h2>
+
+        <p>
+          Bring Big Banana Cafe home with you.
+          Choose your favorite beans and add them to your order.
+        </p>
+
+      </div>
+
+
+      <div class="bean-grid">
+
+
+        <!-- House Blend -->
+
+        <div class="bean-card">
+
+          <div class="bean-image">
+            🫘
+          </div>
+
+          <div class="bean-body">
+
+            <h3>
+              Big Banana House Blend
+            </h3>
+
+            <p>
+              250g • Medium Roast
+            </p>
+
+            <p>
+              Smooth, balanced and chocolatey with caramel notes.
+            </p>
+
+            <div class="price">
+              ฿350
+            </div>
+
+            <button
+              class="btn btn-primary"
+              onclick="addToCart('Big Banana House Blend',350)"
+            >
+              Add to Cart
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- Ethiopian -->
+
+        <div class="bean-card">
+
+          <div class="bean-image">
+            🌱
+          </div>
+
+          <div class="bean-body">
+
+            <h3>
+              Ethiopian Coffee
+            </h3>
+
+            <p>
+              250g • Light Roast
+            </p>
+
+            <p>
+              Floral, fruity and bright with citrus notes.
+            </p>
+
+            <div class="price">
+              ฿420
+            </div>
+
+            <button
+              class="btn btn-primary"
+              onclick="addToCart('Ethiopian Coffee',420)"
+            >
+              Add to Cart
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <!-- Thai Arabica -->
+
+        <div class="bean-card">
+
+          <div class="bean-image">
+            🇹🇭
+          </div>
+
+          <div class="bean-body">
+
+            <h3>
+              Thai Arabica
+            </h3>
+
+            <p>
+              250g • Medium Roast
+            </p>
+
+            <p>
+              Smooth Thai Arabica with cocoa and caramel flavors.
+            </p>
+
+            <div class="price">
+              ฿320
+            </div>
+
+            <button
+              class="btn btn-primary"
+              onclick="addToCart('Thai Arabica',320)"
+            >
+              Add to Cart
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= ABOUT ================= -->
+
+  <section class="alt-bg" id="about">
+
+    <div class="section-inner about-wrap">
+
+      <div class="about-picture">
+        🍌☕
+      </div>
+
+
+      <div class="about-text">
+
+        <h2>
+          About Big Banana Cafe
+        </h2>
+
+        <p>
+          Big Banana Cafe is a friendly cafe where people can enjoy
+          great coffee, good food and a relaxing atmosphere.
+        </p>
+
+        <p>
+          We also sell quality coffee beans so you can enjoy
+          Big Banana coffee at home.
+        </p>
+
+        <a href="#
